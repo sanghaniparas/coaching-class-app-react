@@ -1,0 +1,34 @@
+.switch{
+	position: relative;
+	width: 30px;
+	height: 10px;
+	border-radius: 30px;
+	transition: background-color 100ms ease-out;
+	z-index: 1;	
+  &.switch_is-off{
+	  background-color: #9e9e9e;
+  }
+  &.switch_is-on{
+	  background-color:#fd9b7e;
+  }
+  .toggle-button{
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-color: #ff7249;
+    border-radius: 50%;
+    transition: transform 100ms ease-in-out;
+    z-index: 3;
+    border: 0.05rem solid #ff7249;
+    top: -3px;
+    cursor: pointer;
+
+    &.toggle-button_position-left{
+      transform: translateX(-0px)
+    }
+    &.toggle-button_position-right{
+      transform: translateX(13px)
+    }
+  }
+	
+}

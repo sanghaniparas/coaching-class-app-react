@@ -1,0 +1,128 @@
+%fullwidth{
+	float: left;
+	width: 100%;
+  }
+  %carousel-normal{
+	.a-carousel-wrapper{
+	  padding: 0 0 15px;
+	  h3:empty{
+		display: none;
+	  }
+	  .a-carousel-inner{
+		padding: 0;
+	  }
+	}
+  }
+  .test-details{
+
+	a.viewall {		
+		float: left;
+		padding: 12px;
+		margin-right: 15px;
+		padding-left: 17px;
+	}
+
+	.banner-bottom-tab{
+	  background: $ultra-light-grey;
+	  box-shadow: none;
+	  border-bottom: 1px solid $border-light;
+	}
+	.a-examInfo-wrapper{
+	  padding-top: 0;
+	  .a-info-tab-wrapper{
+		margin: 0;
+		box-shadow: none;
+		border-bottom: 1px solid $border-light;
+	  }
+	}
+	.testfree-packages {   
+	  padding: 30px 0 10px;
+	  position: relative; 
+	  @extend %fullwidth;       
+	  .header-filter{
+		padding: 0 15px 10px;
+	  }
+	  .a-carousel-wrapper{
+		padding: 0;
+		.a-carousel-inner{
+		  padding: 0;
+		}
+	  }
+	}
+	.test-series-test{
+	  padding: 30px 0 10px;
+	  @extend %fullwidth;
+	  @extend %carousel-normal;
+	  .header-filter{
+		padding: 0 15px 10px;
+	  }
+	}
+	.test-practice {
+	  padding: 30px 0 10px;
+	  @extend %fullwidth;
+	  @extend %carousel-normal;
+	  .header-filter{
+		padding: 0 15px 10px;
+	  }
+	}
+	.test-quizzes{
+	  padding: 30px 0 10px;
+	  background: #f5f5f5;
+	  @extend %fullwidth;
+	  @extend %carousel-normal;
+	  .header-filter{
+		padding: 0 15px 10px;
+	  }
+	}
+	.test-exam-features{
+	  padding: 30px 0 10px;
+	  background: #f5f5f5;
+	  @extend %fullwidth;
+	  @extend %carousel-normal;    
+	  .top-title{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		padding-bottom: 40px;
+		h2{
+		  font-weight: $exbold;
+		  font-size: 25px;
+		  padding-bottom: 5px;
+		};
+	  }
+	  .cards-wrapper{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.card{
+		   width: 32%;
+		   border-radius: 6px;
+		   display: flex;
+		   flex-direction: column;
+		   align-items: center;
+		   justify-content: center;
+		   text-align: center;
+		   margin-bottom: 25px;
+		   .icon{
+			 border: 1px solid $orange1;
+			 width: 70px;
+			 height: 70px;
+			 border-radius: 100%;
+			 display: flex;
+			 align-items: center;
+			 justify-content: center;
+			 margin-bottom: 15px;
+		   }
+		   h4{
+			 font-weight: $exbold;
+			 font-size: 18px;
+			 margin-bottom: 10px;
+		   }
+		   p{
+			 line-height: 25px;
+		   }
+		}
+	  }  
+	}
+  }

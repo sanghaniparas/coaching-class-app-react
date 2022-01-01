@@ -1,0 +1,386 @@
+$grey: #797979;
+
+.testpackage-wrapper {
+  background: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-bottom: 20px;
+  .badge {
+    position: absolute;
+    background: #ea5252;
+    color: #fff;
+    padding: 5px 10px;
+    z-index: 0;
+    left: -9px;
+    top: 13px;
+    text-transform: uppercase;
+    height: 28px;
+    line-height: 21px;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 0;
+      width: 0;
+      bottom: -9px;
+      left: 0px;
+      border-top: 9px solid #9c9c9c;
+      border-left: 9px solid transparent;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      background: #ea5252;
+      width: 20px;
+      height: 20px;
+      top: 4px;
+      right: -11px;
+      transform: rotate(45deg);
+      z-index: -1;
+    }
+  }
+  .testpackage-top-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px dashed #bfbfbf;
+    .left-content {
+      width: 75%;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-right: 1px dashed #bfbfbf;
+      .p-img {
+        width: 20%;
+        height: 140px;
+        border-radius: 12px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .p-container {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        padding-left: 20px;
+        position: relative;
+        justify-content: space-between;
+        .p-share {
+          position: absolute;
+          right: 0;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          svg {
+            margin-right: 5px;
+          }
+          .toggle {
+            position: absolute;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            top: 28px;
+            min-width: 250px;
+            right: 0;
+            padding: 20px;
+            -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+          }
+        }
+        .p-title {
+          width: 100%;
+          padding-right: 75px;
+          color: #3a466b;
+          font-weight: 800;
+          margin-bottom: 6px;
+        }
+        .p-left {
+          flex-grow: 1;
+          padding-right: 15px;
+          .p-exam-name {
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+          }
+          .p-validity {
+            font-size: 11px;
+            font-weight: 600;
+            span {
+              color: $grey;
+            }
+          }
+          .p-institute {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 10px;
+            img {
+              width: 18px;
+              margin-right: 5px;
+              height: 18px;
+            }
+          }
+          .p-location {
+            display: flex;
+            align-items: center;
+            font-size: 11px;
+            color: $grey;
+            margin-top: 10px;
+            img {
+              width: 18px;
+              margin-right: 5px;
+            }
+          }
+        }
+        .p-right {
+          display: flex;
+          flex-direction: column;
+          .p-fac-details {
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-bottom: 10px;
+            color: $grey;
+            font-weight: 600;
+          }
+          .p-fac-box {
+            display: flex;
+            align-items: center;
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+            .p-fac-avatar {
+              display: inline-block;
+              width: 30px;
+              height: 30px;
+              border-radius: 100%;
+              overflow: inherit;
+              margin-right: 8px;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 100%;
+              }
+            }
+            .p-fac-name {
+              font-size: 12px;
+              font-weight: 600;
+            }
+            .p-fac-subject {
+              font-size: 11px;
+              color: $grey;
+            }
+          }
+        }
+      }
+    }
+    .right-content {
+      width: 25%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .p-price {
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 10px;
+        img {
+          width: 15px;
+        }
+        span {
+          color: $grey;
+          font-size: 12px;
+          margin-left: 5px;
+          font-weight: 400;
+          img {
+            width: 10px;
+          }
+          strike {
+            margin-right: 5px;
+          }
+        }
+      }
+      .p-exp-label {
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+      .p-ex-time {
+        display: flex;
+        align-items: center;
+        color: #ea5252;
+        margin-bottom: 10px;
+        svg {
+          margin-right: 5px;
+        }
+      }
+      .p-btn {
+        font-size: 15px !important;
+        text-transform: uppercase;
+        width: 60%;
+        margin-top: 15px;
+      }
+    }
+  }
+  .testpackage-bottom-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .p-percent-wrapper {
+      width: 60%;
+      .p-no-of-test {
+        font-size: 12px;
+        span {
+          color: $grey;
+        }
+      }
+      .p-percent-bar {
+        height: 10px;
+        background: #ddd;
+        border-radius: 20px;
+        display: inline-block;
+        width: 92%;
+        margin-right: 10px;
+        overflow: hidden;
+        position: relative;
+        .p-percent-progress {
+          position: absolute;
+          height: 100%;
+          left: 0;
+          top: 0;
+          display: inline-block;
+          background: -webkit-linear-gradient(90deg, #fe5d6f 0%, #fc8f2d 100%);
+          background: linear-gradient(90deg, #fe5d6f 0%, #fc8f2d 100%);
+        }
+      }
+      .p-percentage {
+        color: #3a466b;
+        font-weight: 600;
+      }
+    }
+    .btn-secondary-pill {
+      width: 22%;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}
+
+@include responsive(tab-land) {
+  .testpackage-wrapper {
+    .testpackage-top-container {
+      .left-content {
+        .p-img {
+          height: 65px;
+        }
+      }
+      .right-content {
+        .p-exp-label {
+          font-size: 10px;
+        }
+        .p-ex-time {
+          font-size: 10px;
+        }
+        .p-btn {
+          width: 100%;
+        }
+      }
+    }
+    .testpackage-bottom-container {
+      .p-percent-wrapper {
+        width: 75%;
+      }
+      .btn-secondary-pill {
+        font-size: 10px;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+@include responsive(phone) {
+  .a-dashboard-body {
+    .card {
+      .test-package-filter {
+        flex-wrap: wrap;
+        .search {
+          width: calc(100% - 0px);
+        }
+      }
+    }
+    .filter-headear {
+      .filter-group {
+        flex-wrap: wrap;
+        .item-group {
+          select {
+            min-width: 110px;
+          }
+          label {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .testpackage-wrapper {
+      .testpackage-top-container {
+        .left-content {
+          width: 100%;
+          border-right: none;
+          border-bottom: 1px dashed $border-light;
+          .p-img {
+            width: 100%;
+            height: 140px;
+            margin-bottom: 15px;
+          }
+          .p-container {
+            padding-left: 0;
+            width: 100%;
+            .p-left,
+            .p-right {
+              width: 100%;
+              padding: 0;
+            }
+            .p-right {
+              margin: 10px 0;
+            }
+          }
+        }
+        .right-content {
+          width: 100%;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          .p-exp-label {
+            font-size: 12px;
+          }
+          .p-ex-time {
+            font-size: 14px;
+          }
+        }
+      }
+      .testpackage-bottom-container {
+        .p-percent-wrapper {
+          width: 100%;
+          .p-percent-bar {
+            width: 85%;
+          }
+        }
+        .btn-secondary-pill {
+          width: 100%;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}

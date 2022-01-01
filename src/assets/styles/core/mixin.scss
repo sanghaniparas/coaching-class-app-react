@@ -1,0 +1,134 @@
+@mixin primary-gradient {
+	background: $red !important;
+	background: -moz-linear-gradient(left, $red 0%, $light-orange 100%) !important;
+	background: -webkit-linear-gradient(left, $red 0%, $light-orange 100%) !important;
+	background: linear-gradient(to right, $red 0%, $light-orange 100%) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$red', endColorstr='$light-orange', GradientType=1) !important;
+	color: $white;
+}
+@mixin lightblue-gradient {
+	background: #1e5799;
+	background: -moz-linear-gradient(left, #1e5799 0%, #069bdc 100%);
+	background: -webkit-linear-gradient(left, #1e5799 0%, #069bdc 100%);
+	background: linear-gradient(to right, #1e5799 0%, #069bdc 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#069bdc',GradientType=1 );
+}
+@mixin darkblue-gradient {
+	background: #3d4f77;
+	background: -moz-linear-gradient(left, #3d4f77 0%, #6e82ad 100%);
+	background: -webkit-linear-gradient(left, #3d4f77 0%, #6e82ad 100%);
+	background: linear-gradient(to right, #3d4f77 0%, #6e82ad 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d4f77', endColorstr='#6e82ad',GradientType=1 );
+}
+
+@mixin golden-gradient {
+	background: #c58c14;
+	background: -moz-linear-gradient(left, #c58c14 0%, #d9ba4e 100%);
+	background: -webkit-linear-gradient(left, #c58c14 0%, #d9ba4e 100%);
+	background: linear-gradient(to right, #c58c14 0%, #d9ba4e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c58c14', endColorstr='#d9ba4e',GradientType=1 );
+}
+
+// BOX SHADOW
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow: inset $top $left $blur $color;
+		-moz-box-shadow: inset $top $left $blur $color;
+		box-shadow: inset $top $left $blur $color;
+	} @else {
+		-webkit-box-shadow: $top $left $blur $color;
+		-moz-box-shadow: $top $left $blur $color;
+		box-shadow: $top $left $blur $color;
+	}
+}
+
+@mixin boxsizing {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin fullWidth {
+	width: 100%;
+	float: left;
+}
+
+@mixin transparentGradient {
+	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+}
+
+// responsive
+@mixin responsive($breakpoint) {
+	@if $breakpoint==small-phone {
+		@media only screen and (max-width: 360px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==small-medium-phone {
+		@media only screen and (max-width: 399px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==medium-phone {
+		@media only screen and (max-width: 479px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==extramedium-phone {
+		@media only screen and (max-width: 639px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==phone {
+		@media only screen and (max-width: 767px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==ipad-port {
+		@media only screen and (max-width: 900px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==ipad-land {
+		@media only screen and (max-width: 1023px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==tab-land {
+		@media only screen and (max-width: 1100px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==small-destop {
+		@media only screen and (max-width: 1365px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==mid-desktop {
+		@media only screen and (max-width: 1500px) {
+			@content;
+		}
+	}
+	@if $breakpoint==imac-desktop {
+		@media only screen and (max-width: 1700px) {
+			@content;
+		}
+	}
+	@if $breakpoint==big-desktop {
+		@media only screen and (min-width: 1600px) {
+			@content;
+		}
+	}
+}

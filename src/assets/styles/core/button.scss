@@ -1,0 +1,211 @@
+// BUTTONS
+.btn-primary {
+	@include primary-gradient;
+	border-radius: 30px !important;
+	position: relative;
+	z-index: 0;
+	border: none;
+	padding: 10px 30px !important;
+	font-size: 13px !important;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.btn-primary.radius {
+	border-radius: 4px !important;
+}
+
+.btn-transparent {
+	font-size: 13px;
+	background: transparent;
+	border: none;
+	padding: 10px 30px !important;
+	cursor: pointer;
+}
+
+.edit-btn {
+	min-width: auto !important;
+	padding: 9px 20px !important;
+	background: $white;
+	border: 1px solid $light-grey1;
+	color: $dark-blue;
+	font-weight: 500;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	height: auto !important;
+	font-size: 13px;
+	cursor: pointer;
+
+	&.follow {
+		width: 110px;
+
+		&:hover {
+			background: #ffcdbe;
+			border: 2px solid $orange1;
+			color: $orange1;
+		}
+	}
+
+	&.unfollow {
+		background: $orange1;
+		border: 2px solid $orange1;
+		color: $white;
+	}
+}
+
+.btn-block {
+	width: 100%;
+	font-size: 18px !important;
+}
+
+.btn-warning {
+	background: $orange1;
+	border: $orange1;
+	color: $white;
+	padding: 13px 40px;
+	border-radius: 30px;
+}
+
+.btn-warning-line {
+	background: transparent;
+	border: 1px solid $orange1;
+	color: $orange1;
+	padding: 13px 40px;
+	border-radius: 4px;
+	font-weight: $medium;
+}
+
+.btn-primary-pill {
+	padding: 10px 30px;
+	background: transparent;
+	border: 1px solid $orange1;
+	color: $orange1;
+	border-radius: 30px;
+	font-weight: 600;
+}
+
+.btn-secondary-pill {
+	padding: 10px 30px;
+	background: transparent;
+	border: 1px solid $dark-blue1;
+	color: $dark-blue1;
+	border-radius: 30px;
+	font-weight: 600;
+}
+
+.btn-sm {
+	padding: 7px 18px !important;
+}
+
+.btn-gold {
+	background: $gold;
+	border: none;
+	padding: 10px 20px;
+	color: $white;
+	border-radius: 4px;
+}
+
+.btn-grey {
+	background: $light-grey;
+	border: none;
+	padding: 10px 20px;
+	font-weight: $medium;
+	color: $text-darkblue;
+	border-radius: 4px;
+}
+
+.btn-white {
+	background: $white;
+	border-radius: 4px;
+	padding: 14px 25px;
+	position: relative;
+	z-index: 0;
+	border: none;
+	font-size: 16px !important;
+	overflow: hidden;
+	cursor: pointer;
+	color: $orange1;
+}
+
+.radius-30 {
+	-webkit-border-radius: 30px !important;
+	border-radius: 30px !important;
+}
+
+.btn-primary {
+	&.disabled {
+		background: #cacaca !important;
+		cursor: not-allowed !important;
+	}
+}
+
+.btn-line {
+	background: transparent;
+	border: 1px solid $dark-grey;
+	color: $text-darkblue;
+	padding: 8px 20px;
+	border-radius: 4px;
+	font-weight: $medium;
+	font-size: 12px;
+}
+
+%rounded {
+	padding: 8px 20px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	border: none;
+	font-size: 11px;
+}
+.btn-orange {
+	background: #fc8f2d;
+	color: $white;
+	@extend %rounded;
+}
+.btn-orange-dark {
+	background: #ff825d;
+	color: $white;
+	@extend %rounded;
+}
+.btn-dark-grey {
+	background: #bababa;
+	color: $white;
+	pointer-events: none;
+	@extend %rounded;
+}
+.btn-green {
+	background: #21c179;
+	color: $white;
+	@extend %rounded;
+}
+.btn-dark-blue {
+	background: #3a466b;
+	color: $white;
+	@extend %rounded;
+}
+.btn-light-blue {
+	background: #069cdd;
+	color: $white;
+	@extend %rounded;
+}
+
+.filter-btn {
+	display: inline-flex;
+	align-items: center;
+	color: #fd8041;
+	border: 1px solid #fd8041;
+	border-radius: 4px;
+	padding: 8px 10px;
+	svg {
+		fill: #fd8041;
+		width: 15px;
+		height: 15px;
+		margin-right: 10px;
+	}
+}
+
+
+.btn-lg-green {
+	background: #b2cc23;
+	border: none;
+	padding: 10px 30px;
+}

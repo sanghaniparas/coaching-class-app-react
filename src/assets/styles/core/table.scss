@@ -1,0 +1,44 @@
+// Default Table
+.table{
+      width: 100%;
+      border: 1px solid $border-light;
+      thead{
+        tr{
+          background: $ultra-light-grey;
+          th{
+            padding: 10px;
+            color: $text-darkblue;
+            border: 1px solid $border-light;
+          }
+        }
+      }
+      tbody{
+        tr{
+          td{
+            padding: 10px;
+            color: $text-darkblue;
+            border: 1px solid $border-light;
+          }
+        }
+      }
+      tfoot{
+        @extend thead;
+        tr{          
+          background: transparent;
+          th{
+            font-weight: $exbold; 
+          }        
+        }
+      }
+    }
+    .table-responsive{
+      overflow-x: auto;
+      overflow-y: hidden;
+      .table{
+        thead{
+          th{
+            white-space: nowrap;
+          }
+        }
+      }
+    }

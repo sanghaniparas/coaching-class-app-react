@@ -1,0 +1,32 @@
+.modal-wrapper {
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .modal-content {
+        background: #fff;
+        width: 900px;
+        &.modal-sm {
+            width: 600px !important;
+        }
+    }
+}
+
+@include responsive(phone){
+    .modal-wrapper {
+        .modal-content{
+            width: 95% !important;
+            &.modal-sm{
+             width: 95% !important; 
+            }
+        }
+    }
+}
+

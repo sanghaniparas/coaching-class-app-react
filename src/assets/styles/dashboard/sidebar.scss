@@ -1,0 +1,157 @@
+.a-sidebar{
+    width: 280px;
+    height: 100vh;
+    background-color: $white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 6;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    .a-avatar-info{
+        float: left;
+        width: 100%;
+        padding: 20px 24px;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        .avatar {
+            display: inline-block;
+            width: 65px;
+            height: 65px;
+            border-radius: 100%;
+            border: 2px solid #fd7a49;
+            margin-right: 10px;
+            position: relative;
+            img{
+                border-radius: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .logo-badge{                
+                width: 27px !important;
+                height: 27px !important;
+                position: absolute;
+                right: -8px;
+                bottom: 0px;
+
+            }
+        }
+        .avatar-content {
+            flex-grow: 1;
+            width: calc(100% - 75px);
+            .avatar-name {
+                font-size: 17px;
+                color: #3d4f76;
+                margin-bottom: 6px;
+            }
+            .avatar-mail {
+                font-size: 11px;
+            }
+            .profile-complete {
+                width: 100%;
+                background: #ddd;
+                height: 6px;
+                border-radius: 20px;
+                margin-top: 15px;
+                margin-bottom: 3px;
+                position: relative;
+                overflow: hidden;
+                .progress{
+                    position:absolute;
+                    height:100%;
+                    left: 0;
+                    top:0;
+                    display: inline-block;
+                    background: -webkit-linear-gradient(90deg, #fe5d6f 0%, #fc8f2d 100%);
+                    background: linear-gradient(90deg, #fe5d6f 0%, #fc8f2d 100%);
+                }
+            }
+            .complete-percent {
+                font-size: 10px;
+                color: #676767;
+                margin-right: 5px;
+            }
+            .update.active {
+                font-size: 10px;
+                color: #3d4f76;
+            }
+        }
+    }
+    .a-sidebar-navigation{
+        float: left;
+        width: 100%;
+        ul{
+            float: left;
+            width: 100%;
+            li{
+                float: left;
+                width: 100%;
+                a{
+                    float: left;
+                    width: 100%;
+                    padding: 14px 24px 14px 21px;
+                    box-sizing: border-box;
+                    border-left: 3px solid #ffffff;
+                    display: flex;
+                    align-items: center;
+                    transition: 0.5s;
+                    cursor: pointer;
+                    span{
+                        float: left;
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 16px;
+                        display: flex;
+                        align-items: center;
+                        transition: 0.5s;
+                    }
+                    p{
+                        float: left;
+                        font-size: 15px;
+                        font-weight: $medium;
+                        color: #222222;
+                        transition: 0.5s;
+                    }
+                    &:hover{
+                        border-left: 3px solid #e76c49;
+                        background-color: #3d4f76;
+                        transition: 0.5s;
+                        img{
+                            filter: brightness(100);
+                        }
+                        p{
+                            color: #ffffff;
+                            transition: 0.5s;
+                        }
+                    }
+                    &.a-selected{
+                        border-left: 3px solid #e76c49;
+                        background-color: #3d4f76;
+                        transition: 0.5s;
+                        img{
+                            filter: brightness(100);
+                        }
+                        p{
+                            color: #ffffff;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .a-select-navigation {
+        border-left: 3px solid #e76c49;
+        background-color: #3d4f76;
+        transition: 0.5s;
+        img {
+            filter: brightness(100);
+        }
+        p {
+            color: #fff !important;
+        }
+    }
+}

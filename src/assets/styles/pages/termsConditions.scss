@@ -1,0 +1,123 @@
+.terms-wrapper {
+  padding-bottom: 30px;
+  .terms-banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    &::before{
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.3);
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .t-title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 30px;
+  }
+  .t-subtitle {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000000;
+  }
+  p{
+    line-height: 24px;
+    margin-bottom: 20px;
+    .underline {
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    a{
+      color: #49a7f7;
+    }
+  }
+  ul {
+    padding-left: 20px;
+    li{
+      list-style-type: disc;
+      margin-bottom: 10px;
+      line-height: 24px;
+    }
+  }
+  .number-list{
+    counter-reset: list;
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+      line-height: 24px;
+      &::before{        
+        content: counter(list, upper-roman) ") ";
+        counter-increment: list;        
+      }
+    }
+  }
+  .style-bullet{
+    position: relative;
+    padding-left: 20px;
+    &::before{
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 10px;
+      width: 5px;
+      height: 5px;
+      -webkit-border-radius: 100%;
+      border-radius: 100%;
+      background: #000;
+    }
+  }
+}
+// Careers
+.box-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  .box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 30px;
+     img {
+      width: 50px;
+    }
+    h3{
+      font-size: 20px;
+      font-weight: 600;
+      padding: 10px;
+    }
+  }
+}
+.position{
+  font-size: 20px;
+  font-weight: $exbold;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+
+@include responsive(phone){
+  .terms-wrapper {
+    .terms-banner{
+      min-height: 90px;
+      margin-bottom: 20px;
+      .t-title{
+        font-size: 22px;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import './core/PostCard.scss';
+@import './core/mixin.scss';
+@import './core/variables.scss';
+@import './core/modal.scss';
+@import './core/tooltip.scss';
+@import './core/base.scss';
+@import './core/button.scss';
+@import './core/form.scss';
+@import './core/common.scss';
+@import './core/table.scss';
+@import './core/topbar.scss';
+@import './core/header.scss';
+@import './core/footer.scss';
+@import './core/toast.scss';
+@import './core/faq.scss';
+@import './core/question-card.scss';
+
+@import './pages/signup.scss';
+@import './pages/login.scss';
+@import './pages/home.scss';
+@import './pages/coaching.scss';
+@import './pages/coachingCardDetails.scss';
+@import './pages/practiceDetails.scss';
+@import './pages/quizDetails.scss';
+@import './pages/testDetails.scss';
+
+@import './pages/testReport.scss';
+@import './pages/exam.scss';
+@import './pages/Pass.scss';
+@import './pages/testpackages.scss';
+@import './pages/error.scss';
+@import './pages/quizListing.scss';
+@import './pages/practiceType.scss';
+@import './pages/practice-resume.scss';
+@import './pages/myprofile.scss';
+@import './pages/searchpage.scss';
+@import './pages/mycarts.scss';
+@import "./pages/template.scss";
+@import "./pages/termsConditions.scss";
+@import "./pages/contactus.scss";
+@import "./pages/aboutus.scss";
+
+// Dashboard
+@import './dashboard/dashboard.scss';
+@import './dashboard/sidebar.scss';
+@import './dashboard/testpackage.scss';
+@import './dashboard/testseries.scss';
+@import './dashboard/switch.scss';
+
+
+// Placeholder
+@import "./placeholder/placeholder.scss";
+
+//Payment
+@import "./pages/payment.scss";

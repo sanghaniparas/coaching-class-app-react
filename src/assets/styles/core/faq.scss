@@ -1,0 +1,101 @@
+.a-accordian{
+  float: left;
+  width: 100%;
+  padding: 40px 0px 50px;
+  background-color: $light-grey;
+  h4{
+    float: left;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  .a-faqwrap{
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: $white;
+    border: 1px solid $border-light;
+    border-radius: 4px;
+    @include box-shadow(0, 2px, 4px, rgba(0, 0, 0, 0.14));
+    .accordion-wrapper{
+      float: left;
+      width: 100%;
+      &:last-child{
+        border-bottom: 0px solid transparent;
+      }
+      .accordion-title{
+        float: left;
+        width: 100%;
+        padding: 14px 20px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border-bottom: 1px solid $border-light;
+        box-shadow: none;
+        cursor: pointer;
+        span{
+          float: left;
+          width: 2%;
+          margin-right: 20px;
+        }
+        p{
+          float: left;
+          width: 94%;
+          /* height: 30px; */
+          line-height: 22px;
+          color: #212121;
+          font-size: 14px;
+          font-weight: 700;
+        }
+        &.open{
+          @include box-shadow(0, 5px, 8px, rgba(0, 0, 0, 0.14));
+        }
+      }
+      .accordion-item {
+        float: left;
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 14px 30px 14px 62px;
+        border-bottom: 1px solid $border-light;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        &.collapsed{
+          padding: 0px 20px;
+          height: 0px;
+          display: none;
+          border-bottom: 0px solid transparent;
+        }
+        .accordion-content{
+          float: left;
+          width: 100%;
+          p{
+            float: left;
+            width: 100%;
+            color: $dark-grey;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 16px;
+            span{
+              color: #707070;
+            }
+          }
+          ul{
+            float: left;
+            width: 100%;
+            li{
+              float: left;
+              width: 100%;
+              color: $dark-grey;
+              font-size: 14px;
+              line-height: 20px;
+              margin-bottom: 10px;
+              list-style: disc;
+            }
+          }
+        }
+      }
+    }
+  }
+}
